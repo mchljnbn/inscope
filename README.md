@@ -24,10 +24,17 @@ follow was detected*, not the exact time it happened. Instagram also serves
 only a ranked subset (roughly 85–90% coverage per merged snapshot), and
 verified accounts may return no list at all.
 
+## Backend
+
+The app connects to Inscope's hosted backend by default, so you don't need to
+run any server yourself. If you prefer full control, you can change **Settings →
+Backend URL** to your own Inscope-compatible server.
+
 ## Your privacy
 
 - **No shared or "helper" Instagram account.** Your access is exactly what your own account can see.
 - Your session is sent **per request** in an `X-IG-Session` header. The backend uses it in memory only — it is never written to its database or disk, and no other user can use it.
+- With the default hosted backend, that transient header passes through Inscope's server. Self-hosting is available if you prefer not to trust a third party.
 - If a private profile isn't visible to you, the app says so. It never borrows someone else's access.
 - You choose the backend URL in Settings. Only point the app at a server you control.
 - Private profiles you cannot see are reported as unavailable — by design.
