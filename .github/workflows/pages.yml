@@ -3,9 +3,6 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: [main, master]
-    paths:
-      - 'public/**'
-      - '.github/workflows/pages.yml'
   workflow_dispatch:
 
 permissions:
@@ -28,11 +25,14 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          # Public repo keeps index.html/README.md at the repository root.
+          path: .
 
       - name: Deploy
         id: deployment
