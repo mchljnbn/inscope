@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inscope — Instagram data viewer</title>
+  <meta name="description" content="Inscope is a free Instagram data viewer for Android and web. Public data without login; follower lists with your own session, never a shared account.">
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    body { margin: 0 auto; max-width: 760px; padding: 48px 20px; line-height: 1.6; }
+    h1 { font-size: 2.4rem; margin-bottom: 0; }
+    .tag { color: #6b46c1; font-weight: 600; }
+    .status { display: inline-block; padding: 4px 10px; border-radius: 999px; background: #ede9fe; color: #4c1d95; font-size: .85rem; }
+    a { color: #6b46c1; }
+    section { margin-top: 36px; }
+    code { background: rgba(127,127,127,.15); padding: 2px 6px; border-radius: 4px; }
+    footer { margin-top: 48px; font-size: .85rem; opacity: .75; }
+  </style>
+</head>
+<body>
+  <h1>Inscope</h1>
+  <p class="tag">Instagram data viewer · Go + Python backend · Flutter client</p>
+  <p><span class="status">Pre-launch — GitHub release pending</span></p>
+
+  <section>
+    <h2>What it does</h2>
+    <p>
+      Inscope reads public Instagram profile, post, comment and search data without
+      an official API. Follower/following lists require a logged-in session, so the
+      app sends <strong>your own session per request</strong> — it is used in memory
+      only and never written to the backend's database or disk. There is no shared
+      or "helper" account, and no user can use another user's session.
+    </p>
+    <p>
+      Because Instagram removed chronological follow order in 2026, Inscope
+      reconstructs new follows by taking dated snapshots and merging the ranked
+      subsets Instagram actually serves. Detection time is not exact follow time.
+    </p>
+  </section>
+
+  <section>
+    <h2>Download</h2>
+    <p>
+      <a id="releases" href="https://github.com/mchljnbn/inscope/releases">Android APK releases</a>
+      · <a id="source" href="https://github.com/mchljnbn/inscope">Source code</a>
+    </p>
+    <p>Distributed on GitHub as a sideloaded APK. Not distributed on Google Play.</p>
+  </section>
+
+  <section>
+    <h2>Privacy &amp; optional monetization</h2>
+    <p>
+      Inscope is free and works fully with all optional features off. An optional,
+      opt-in Honeygain integration may be offered in a private build. If enabled, it
+      shares a small amount of unused internet bandwidth and allows Honeygain to
+      create exit nodes through end users' devices. It does not access personal
+      data, files, messages, or browsing history. Users must explicitly accept a
+      consent screen and can opt out at any time in Settings. Sharing may increase
+      Instagram rate limits on the same device.
+    </p>
+    <p>
+      <a href="https://www.honeygain.com/sdk-privacy-policy/">Honeygain SDK privacy policy</a>
+      · <a href="https://www.honeygain.com/sdk-tos/">Honeygain SDK terms</a>
+      · <a href="https://sdk.honeygain.com/trust-center/">Honeygain trust center</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p id="contact">Open an issue on the <a href="https://github.com/mchljnbn/inscope/issues">GitHub repository</a>.</p>
+  </section>
+
+  <footer>
+    This page is served free through GitHub Pages. The source code lives in a
+    private repository; only releases and user documentation are public.
+  </footer>
+</body>
+</html>
